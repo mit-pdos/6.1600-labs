@@ -44,14 +44,10 @@ def test_4b():
         raise Exception(f"H({a}) = {H(a).hex()} != H({b}) = {H(b).hex()}")
 
 def test_questions():
-    file = open("questions.txt", "r")
-    #read the content of file
-    data = file.read()
-    #get the length of the data
-    number_of_characters = len(data)
-
-    if(number_of_characters < 500):
-        raise Exception("questions.txt not answered!")
+    from pathlib import Path
+    questions = Path('questions.pdf')
+    if not questions.exists():
+        raise Exception("questions.pdf is not found!")
 
 checks = {
     "2a": test_2a,
