@@ -14,7 +14,7 @@ Please download all the required files from the [lab0 github repo](https://githu
 * **Code:** Place your code answers in the template [`sol.py`](https://github.com/mit-pdos/6.1600-labs/tree/main/hash/sol.py).
     Please include all code necessary to generate your solution in each of the respective methods. Do not just hard code working answers!
 
-* **Text:** Place your written answers in the template [`questions.txt`](https://github.com/mit-pdos/6.1600-labs/tree/main/hash/questions.txt)
+* **Text:** Place your written answers in the Latex template [`questions.txt`](https://github.com/mit-pdos/6.1600-labs/tree/main/hash/questions.txt)
 
 Upload all files (`sol.py`, `questions.txt`, and any supplementary files you used) to the [lab0 gradescope assignment](https://www.gradescope.com/courses/533302/assignments/3127745/).
 
