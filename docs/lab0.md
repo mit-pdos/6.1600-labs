@@ -100,7 +100,7 @@ standard output as a hex string.
     ```
     Which outputs a hash.
 
-    Each student in 6.1600 has a unique `$PASSWORD` to find. To get the hash for your `$PASSWORD`, submit an empty `sol.py` to [gradescope](https://www.gradescope.com/courses/533302/assignments/3127745/). And you should see a result like this for problem 2a:
+    Each student in 6.1600 has a unique `$PASSWORD` to find. To get the hash for your `$PASSWORD`, submit an empty `sol.py` to [gradescope](https://www.gradescope.com/courses/844720/assignments/4841037). And you should see a result like this for problem 2a:
 
     ```
     2a) test_2a

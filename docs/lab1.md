@@ -24,9 +24,9 @@ Please download all the required files from the [lab1 github repo](https://githu
 * **Code:** Place your code answers in the template [`attack.py`](https://github.com/mit-pdos/6.1600-labs/tree/main/merkle/attack.py).
     Please include all code necessary to generate your solution in each of the respective methods. Do not just hard code working answers!
 
-* **Text:** Place your written answers in the template [`questions.txt`](https://github.com/mit-pdos/6.1600-labs/tree/main/merkle/questions.txt)
+* **Text:** Answer the written questions in the [lab1 questions gradescope assignment](https://www.gradescope.com/courses/844720/assignments/4917891). There are both warm-up excercises and theory questions at the end of the lab.
 
-Upload all files (`attack.py`, `questions.txt`) to the [lab1 gradescope assignment](https://www.gradescope.com/courses/533302/assignments/3287458/).
+Upload `attack.py` to the [lab1 code gradescope assignment](https://www.gradescope.com/courses/844720/assignments/4918255).
 
 **Running the Lab on Windows**
 `make check` and `make run-server` and `make venv` do not natively work on Windows.
@@ -98,7 +98,7 @@ server by running `make run-server`.  Finally, in another terminal, use
     ...
 ```
 
-Answer the following questions:
+Answer the following questions in the [gradescope assignment](https://www.gradescope.com/courses/844720/assignments/4917891):
 
 1. When you restart the server (kill the running server and run
   `make run-server` again), what happens to subsequent client lookups
@@ -175,7 +175,7 @@ client authenticates the responses it gets from the store.  For example:
     % venv/bin/python cli.py --print-proofs get foo
 ```
 
-Answer the following questions:
+Answer the following questions in the [gradescope assignment](https://www.gradescope.com/courses/844720/assignments/4917891):
 
 {:start="3"}
 1. How long is the proof for `get foo` after you've inserted both
@@ -202,10 +202,8 @@ to understand how these two components work in detail.
    The client inserts a key-value pair (`hello`, `world`), and then the client
    starts interacting with the adversarial store (`c._store = a`), and the adversary
    gets to supply a fake key of the adversary's choice (`a.attack_fake_key()`).
-
-2. Implement your attack by modifying `AttackOne` in
-  [attack.py](https://github.com/mit-pdos/6.1600-labs/blob/main/merkle/attack.py).
-  Run `make check` to check if your attack works.
+  
+    Implement your attack by modifying `AttackOne` in [attack.py](https://github.com/mit-pdos/6.1600-labs/blob/main/merkle/attack.py). Run `make check` to check if your attack works.
 
 
 # Attack scenario 2: Many fake key-value pairs
@@ -219,10 +217,8 @@ many key-value lookups will then succeed on the client (all of the keys in
 
 1. Find a weakness in the authentication scheme that allows an adversary to
   mount an attack against scenario 2.
-
-2. Implement your attack by modifying `AttackTwo` in
-  [attack.py](https://github.com/mit-pdos/6.1600-labs/blob/main/merkle/attack.py).
-  Run `make check` to check if your attack works.
+  
+    Implement your attack by modifying `AttackTwo` in [attack.py](https://github.com/mit-pdos/6.1600-labs/blob/main/merkle/attack.py). Run `make check` to check if your attack works.
 
 
 # Attack scenario 3: Fake proofs
@@ -238,10 +234,8 @@ single element in the `proof.siblings` list.
 
 1. Find a weakness in the authentication scheme that allows an adversary to
   mount an attack against scenario 3.
-
-2. Implement your attack by modifying `AttackThree` in
-  [attack.py](https://github.com/mit-pdos/6.1600-labs/blob/main/merkle/attack.py).
-  Run `make check` to check if your attack works.
+    
+    Implement your attack by modifying `AttackThree` in [attack.py](https://github.com/mit-pdos/6.1600-labs/blob/main/merkle/attack.py). Run `make check` to check if your attack works.
 
 
 # Attack scenario 4: Insert confusion (Optional, extra credit)
@@ -275,28 +269,11 @@ to these questions, but understanding how this works will likely help
 you implement the attack for scenario 4.
 
 1. Find a weakness in the authentication scheme that allows an adversary to
-  mount an attack against scenario 4.
-
-2. Implement your attack by modifying `AttackFour` in
-  [attack.py](https://github.com/mit-pdos/6.1600-labs/blob/main/merkle/attack.py).
-  Run `make check` to check if your attack works.
+  mount an attack against scenario 4. 
+  
+    Implement your attack by modifying `AttackFour` in [attack.py](https://github.com/mit-pdos/6.1600-labs/blob/main/merkle/attack.py). Run `make check` to check if your attack works.
 
 
-# Fixing the security definition and the implementation
+# Theory Questions
 
-Here is a starting point for a security definition for the authenticated
-key-value store:
-
-> Suppose that a client performs some set of key-value puts.
-> The client is secure if, when it performs a subsequent get
-> of any value against a store controlled by a computationally-bounded adversary,
-> it will either return the same result that it would have gotten from the
-> correct store, or raise an exception.
-
-1. Extend this definition to capture the attack scenarios codified
-   in `grader.py` in the attacks above, to arrive at a strong
-   definition of security for an authenticated key-value store.
-
-2. How would you change the implementation to ensure security against all
-   of the attacks in your revised definition?  There are multiple correct
-   ways to make the Merkle tree secure; you only need to describe one.
+Answer all of the theory questions on [gradescope](https://www.gradescope.com/courses/844720/assignments/4917891).
