@@ -68,8 +68,8 @@ behind this lab assignment.
 >    run the code.
 
 In this lab assignment, you will attack an authenticated
-key-value store that uses Merkle trees.  The code is available at
-[https://github.com/mit-pdos/6.1600-labs/tree/main/merkle](https://github.com/mit-pdos/6.1600-labs/tree/main/merkle).
+key-value store that uses Merkle trees.  The code is available in the
+[lab1 github repo](https://github.com/mit-pdos/6.1600-labs/tree/main/merkle).
 
 The key-value store consists of two parts: a _store_ that stores
 key-value pairs, and a _client_ that can perform get and put operations.
