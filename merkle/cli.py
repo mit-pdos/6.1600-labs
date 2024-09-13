@@ -47,19 +47,18 @@ except FileNotFoundError:
 
 client.verbose_validate = args.print_proofs
 
-match args.cmd:
-    case 'get':
-        r = client.lookup(args.key.encode('utf-8'))
-        if r is None:
-            print(r)
-        else:
-            print(r.decode('utf-8'))
-    case 'put':
-        client.insert(args.key.encode('utf-8'), args.value.encode('utf-8'))
-    case 'reset':
-        client.reset()
-    case _:
-        parser.print_help()
+if args.cmd == 'get':
+    r = client.lookup(args.key.encode('utf-8'))
+    if r is None:
+        print(r)
+    else:
+        print(r.decode('utf-8'))
+elif args.cmd == 'put':
+    client.insert(args.key.encode('utf-8'), args.value.encode('utf-8'))
+elif args.cmd == 'reset':
+    client.reset()
+else:
+    parser.print_help()
 
 with open(args.root_file, 'wb') as f:
     f.write(b'%s\n' % binascii.hexlify(client._root_hash))
