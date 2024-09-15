@@ -19,7 +19,7 @@ python cli.py <get/put/reset>
 
 Instead of `make run-server`:
 ```
-python -m flask --app server run
+python server.py
 ```
 
 
