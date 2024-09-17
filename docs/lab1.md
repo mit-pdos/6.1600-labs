@@ -178,7 +178,7 @@ client authenticates the responses it gets from the store.  For example:
 Answer the following questions in the [gradescope assignment](https://www.gradescope.com/courses/844720/assignments/4917891):
 
 {:start="3"}
-1. How long is the proof for `get foo` after you've inserted both
+1. How many siblings are included in the proof to verify the node for `get foo` after you've inserted both
   `foo=bar` and `hello=world` into the store, as in the above example?
   Explain why that is.
 
