@@ -86,7 +86,7 @@ To get familiar with the key-value store used in this lab, experiment
 with it using the command-line interface.  Run `make venv` to set up
 the Python environment with the required packages.  Then, start the store
 server by running `make run-server`.  Finally, in another terminal, use
-`venv/bin/python cli.py` to issue put and get requrests to the server, like:
+`venv/bin/python cli.py` to issue put and get requests to the server, like:
 
 ```
     % venv/bin/python cli.py get foo
