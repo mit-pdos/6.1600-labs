@@ -78,12 +78,12 @@ resulting public key to standard output.
     a base-10 integer.
 
 
-    For example, on August 16, 2023 we generated a key...
+    For example, on September 26, 2024 we generated a key...
     ```
     $ python keygen.py > key.txt
     -----BEGIN PUBLIC KEY-----
-    MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEQfbUYzbQUiQWHcOtcmf/cVr+ygHI
-    hs560RKiVUV0gqm4OyNLB+HCSf8c7mGzxDuuid8z3RkdXC9vw1e6tDuSRg==
+    MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE/UsMU+m9RnORLVXJakagaKLcXtPDo8RCw4KqhsYG
+    hYsFJsQws+nQk0qdbm5G4bJIAINhav/wPNT7W26NY3CLFQ==
     -----END PUBLIC KEY-----
     ```
 
@@ -91,9 +91,9 @@ resulting public key to standard output.
     recover the secret key...
     ```
     $ with open('key.txt', 'r') as file:
-    $   print(problem_1a("2023-08-16", VerifyingKey.from_pem(file.read())))
+    $   print(problem_1a("2024-09-24", VerifyingKey.from_pem(file.read())))
 
-    88928882924258032953987945121779605092553192944307381616887680985059143398985
+    57cc1bca1dccf1f222d1ea6ac390d2e331d4650add7e5e8d85743e9e6ce5e7a1
     ```
 
     Run `make check` to test your solution.
@@ -147,7 +147,7 @@ where:
 * $$H\colon \{0,1\}^* \to \mathbb{Z}_q$$ is a hash
   function,
 
-* $$g$$ is the generator of and order-$$q$$ group
+* $$g$$ is the generator of an order-$$q$$ group
   $$\mathbb{G}$$,
 
 * $$\alpha_\text{t} \in \mathbb{Z}_q$$ is the
@@ -269,7 +269,7 @@ we XOR these bytes with the ciphertext.
     and accepts the packet if $$\text{Hash}(m) = h$$.
 
     Show that if the attacker intercepts a data
-    frame containing the encryption of a known
+    frame with the encryption of a known
     plaintext $$m$$, the attacker can trick the 
     recipient into accepting a message (of length
     $$|m|$$) of the attacker's choosing.
@@ -292,7 +292,7 @@ we XOR these bytes with the ciphertext.
     Implement your attack as `attack_two` in
     [`wep/attacker.py`](https://github.com/mit-pdos/6.1600-labs/tree/main/bad-random/wep/attacker.py).
 
-1.  *Extra credit (challenging)*: A WEP recipient who receives a data frame with
+1.  *Optional Extra credit (challenging)*: A WEP recipient who receives a data frame with
     an invalid integrity hash will complain, while
     a recipient who receives a valid data frame
     will not. Explain how an attacker can use this
