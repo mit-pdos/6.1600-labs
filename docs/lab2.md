@@ -13,14 +13,14 @@ title: "Lab 2: Bad randomness"
 **Instructions on how to submit Lab 2:**
 Please download all the required files from the [lab2 github repo](https://github.com/mit-pdos/6.1600-labs/tree/main/bad-random/).
 
-* **Problem 0:** Please complete the True/False questions in the [lab2-problem0 gradescope assignment](https://www.gradescope.com/courses/533302/assignments/3287458/).
+* **Problem 0:** Please complete the Problem 0 theory questions in the [Lab 2 Questions gradescope assignment](https://www.gradescope.com/courses/844720/assignments/5049460/).
 
 * **Code:** Place your code answers in the template [`ecdsa/sol.py`](https://github.com/mit-pdos/6.1600-labs/tree/main/bad-random/ecdsa/sol.py) for ecdsa questions and [`wep/attacker.py`](https://github.com/mit-pdos/6.1600-labs/tree/main/bad-random/wep/attacker.py).
     Please include all code necessary to generate your solution in each of the respective methods. Do not just hard code working answers!
 
-* **Text:** Place your written answers in the template [`questions.txt`](https://github.com/mit-pdos/6.1600-labs/tree/main/bad-random/questions.txt)
+* **Theory:** Please answer each attack's corresponding theory questions in the [Lab 2 Questions gradescope assignment](https://www.gradescope.com/courses/844720/assignments/5049460/).
 
-Upload all files (`sol.py`, `attacker.py`, `questions.txt`) to the [lab2 gradescope assignment](https://www.gradescope.com/courses/533302/assignments/3287458/).
+Upload all files (`sol.py`, `attacker.py`) to the [Lab 2 Code gradescope assignment](https://www.gradescope.com/courses/844720/assignments/5048646/).
 
 **Running the Lab on Windows**
 `make check` and `make venv` do not natively work on Windows.
@@ -50,71 +50,8 @@ We are not happy when we find copied code.
 
 # Problem 0: True/False
 
-Please complete the True/False questions in the [lab2-problem0 gradescope assignment](https://www.gradescope.com/courses/533302/assignments/3287458/).
+Please complete the True/False questions in the [Lab 2 Questions gradescope assignment](https://www.gradescope.com/courses/844720/assignments/5049460/).
 
-For these problems, let $$F \colon \{0,1\}^n \times \{0,1\}^n \to \{0,1\}^n$$ 
-be a pseudorandom function. Let $$n \approx 256$$ be the security parameter.
-
-1.  The function $$F'(k) := F(k, 0)$$ must be
-    a one-way function.
-
-1.  The function $$F'(k) := F(0, k)$$ must be
-    a one-way function.
-
-1.  The function $$F'(k) := F(k, 0) \| k $$ 
-    must be a one-way function.
-
-1.  A one-way function must be collision
-    resistant.
-
-1.  If $$\mathsf{MAC}(k,m)$$ is a secure MAC, then
-    $$\mathsf{MAC}(k,m)$$ must be a pseudorandom function.
-
-1.  The function $$\mathsf{MAC}(k,m) := F(k,m)$$
-    is a secure MAC with message space $$\{0,1\}^n$$.
-
-1.  The function $$\mathsf{MAC}(k,m) := F(k,\textbf{0}^{n-1}\|m)$$
-    is a secure MAC with message space $$\{0,1\}$$,
-    where $$\textbf{0}^{n-1}$$ is a string of $$n-1$$ zeros.
-
-1.  The function $$\mathsf{MAC}(k,m) := k \oplus m$$
-    is a secure MAC.
-
-1.  Let $$H \colon \{0,1\}^* \to \{0,1\}^\ell$$ be a collision-resistant hash function.
-    There is a collision-finding attack on $$H$$ that runs in time roughly $$2^{\ell/2}$$.
-
-1.  If $$\Sigma$$ is a secure digital signature
-    scheme (using the definition from lecture), then 
-    $$\Sigma$$ remains secure even if an adversary can
-    obtain many signatures on messages of its
-    choice.
-
-1.  If $$\Sigma$$ is a secure digital signature
-    scheme (using the definition from lecture), then 
-    $$\Sigma$$ remains secure even if an adversary can
-    obtain half of the bits of the secret signing key.
-
-1.  It is possible to use the ``hash-and-sign''
-    paradigm with Lamport signatures.
-
-1.  The RSA full-domain-hash signature scheme is
-    proven secure under the RSA assumption and
-    the assumption that the hash function is
-    collision reistant.
-
-1.  A Lamport signature on an $$n$$ bit message
-    requires $$\lambda^2 n$$ bits to represent, 
-    where $$\lambda$$ is the output length of
-    the one-way function.
-
-1.  There are in principle efficient
-    (polynomial-time) attacks
-    that break all known one-way functions on 
-    a quantum computer.
-
-1.  There are in principle efficient
-    (polynomial-time) attacks
-    that break RSA on a quantum computer.
 
 # Problem 1: Bad randomness in key generation
 
@@ -174,7 +111,7 @@ resulting public key to standard output.
    256-bit ECDSA keypair.
 
     For which values of `N` is this approach secure?
-    (Indicate all that apply.)
+    (Indicate all that apply on the [Lab 2 Questions gradescope assignment](https://www.gradescope.com/courses/844720/assignments/5049460/))
 
     * 4 bytes
 
@@ -233,10 +170,12 @@ integer.
     that were generated using the same secret key
     $$\alpha$$ and signing nonce $$\alpha_\text{t}$$.
 
-    Show how an attacker can use these signatures
+    Determine how an attacker can use these signatures
     to recover the signer's secret key $$\alpha$$.
-    In particular, write an expression for $$\alpha$$ 
+    In particular, derive an expression for $$\alpha$$ 
     in terms of the other quantities.
+
+    There is nothing to turn in for this question, but your answer will be used in part `b`.
 
     _Hint:_ Your attack should not need to use
     any properties of elliptic curves.
@@ -279,10 +218,11 @@ integer.
     $$\{1, \dots, 2^{128}\}$$.
     Call this modified system "BadECDSA".
     
-    Show that after an attacker obtains $$2^{64}$$
-    BadECDSA signatures, it can recover the
-    signer's secret key with constant probability.
-    Therefore BadECDSA can have at most 64-bit security.
+    We claim that BadECDSA can have at most 64-bit security.
+    Why is it that an attacker can recover the signer's
+    secret key with constant probability after an attacker
+    obtains $$2^{64}$$ BadECDSA signatures? Please answer in
+    the [Lab 2 Questions gradescope assignment](https://www.gradescope.com/courses/844720/assignments/5049460/).
 
 
 # Problem 3: Security issues in the WEP encryption scheme
@@ -317,6 +257,8 @@ we XOR these bytes with the ciphertext.
 
     What information can an attacker learn when 
     this occurs?
+
+    Please answer in the [Lab 2 Questions gradescope assignment](https://www.gradescope.com/courses/844720/assignments/5049460/).
 
 1.  WEP uses an insecure "hash-then-encrypt"
     scheme for integrity protection. In
@@ -369,7 +311,7 @@ we XOR these bytes with the ciphertext.
     out.
     
 
-# Extra credit: Bad randomness in GMAC
+# Optional (no extra credit): Bad randomness in GMAC
 
 Read Chapter 9.7 of [Boneh-Shoup book](https://toc.cryptobook.us/book.pdf),
 which is about the AES-GCM mode of operation.
