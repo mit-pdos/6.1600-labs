@@ -11,22 +11,28 @@ def get_countries():
     return countries
 
 def grade_decrypt():
-    countries = get_countries()
-    secret = "{\n"
-    for i in range(3):
-        secret += '"city%d": "%s",\n' % (i, random.choice(countries))
-    secret += "}\n"
+    raise ValueError("Please test your decryption attack on gradescope")
+    
+    # The autograder will run the code below to grade your solution
 
-    print(secret)
-    c = client.Client()
+    # countries = get_countries()
+    # secret = "{\n"
+    # for i in range(3):
+    #     secret += '"city%d": "%s",\n' % (i, random.choice(countries))
+    # secret += "}\n"
 
-    def run_client(prefix):
-        return c.run_client(prefix + secret, compress=True)
+    # print(secret)
+    # c = client.Client()
 
-    guess = attack.attack_decrypt(run_client)
+    # def run_client(prefix):
+    #     # This is the function that compresses with our compression algorithm
+    #     # and sends the message. Returns: (bytes_sent, bytes_received)
+    #     return COMPRESS_AND_SEND(prefix + secret)
 
-    if secret != guess:
-        raise ValueError("Bad guess")
+    # guess = attack.attack_decrypt(run_client)
+
+    # if secret != guess:
+    #     raise ValueError("Bad guess")
 
 def grade_tamper(compress=False):
     a = attack.AttackTamper(compress)
