@@ -20,4 +20,4 @@ if __name__ == "__main__":
     nbytes = len(passwd) // 2
     server = bad_server.BadServer(passwd)
     alice = Client(server)
-    print(alice.steal_secret_token(nbytes))
+    print(alice.steal_password(nbytes))

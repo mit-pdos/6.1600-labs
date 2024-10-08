@@ -14,20 +14,24 @@ class BadServer:
         pass
 
     def verify_password(self, request: api.VerifyRequest) -> api.VerifyResponse:
-        try:
-            s = request.password
-            for i in range(len(self._password)):
-                if len(s) <= i:
-                    return api.VerifyResponse(False)
-                elif s[i] != self._password[i]:
-                    return api.VerifyResponse(False)
+        assert False, "Please use gradescope tester to verify your attack"
 
-            # At this point, the user is authenticated.
-            self.send_money()
+        # The autograder will run a process very close to the following code:
+        # You can dig in here to find the exploit, but test your attack's success on gradescope
+        # try:
+        #     s = request.password
+        #     for i in range(len(self._password)):
+        #         if len(s) <= i:
+        #             return api.VerifyResponse(False)
+        #         elif s[i] != self._password[i]:
+        #             return api.VerifyResponse(False)
 
-            return api.VerifyResponse(True)
-        except:
-            return api.VerifyResponse(False)
+        #     # At this point, the user is authenticated.
+        #     self.send_money()
+
+        #     return api.VerifyResponse(True)
+        # except:
+        #     return api.VerifyResponse(False)
 
 if __name__ == "__main__":
     import doctest
