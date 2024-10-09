@@ -113,7 +113,7 @@ sm4-cfb           sm4-ctr           sm4-ecb           sm4-ofb
 zlib
 ```
 
-You can see benchmark each of the message-digest
+You can benchmark each of the message-digest
 and cipher algorithms listed here by running
 `openssl speed <ALG_NAME>`. For example `openssl
 speed rc4` will give you performance numbers for
@@ -259,7 +259,7 @@ the `BadServer` instance.
 
 In this problem, you will mount two 
 different attacks: one that theoretically could work against a real SSH implementation
-and one actually on a real SSH implementation.
+and one that actually works on a real SSH implementation.
 The SSH client and server are built with the very
 slick [`paramiko`](https://github.com/paramiko/paramiko) library.
 
@@ -268,7 +268,7 @@ The starter code for this assignment is in
 
 You will have to implement two functions in
 [`ssh/attack.py`](https://github.com/mit-pdos/6.1600-labs/blob/main/ssh/attack.py).
-You should not change any of the other file -- we
+You should not change any of the other files -- we
 will grade your solution against fresh copies of these files.
 
 Problem 3A is nondeterministic against real SSH implementations. To simplify the attack,
@@ -414,5 +414,10 @@ either to complete the problem.
 
 Repeat the attack of Part (b), except that now you 
 must mount the attack against an SSH client that
-uses packet compression.
+uses packet compression. Specifically, the details from the attack 
+in Part (b) are the same except we will now set `compress=True` when
+connecting to the server. Thus, the messages throughout the communication will remain the
+same, but they will now be compressed before they are sent. The attack succeeds
+[if the SSH server](https://github.com/mit-pdos/6.1600-labs/tree/ssh/server.py#L78) 
+decompresses your message to the special string `rm -r /`.
 
