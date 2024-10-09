@@ -23,12 +23,12 @@ Please download all the required files from the [lab3-timing github repo](https:
 
 * **Code:** Place your code answers in the template [`timing/attacker.py`](https://github.com/mit-pdos/6.1600-labs/tree/main/bad-random/timing/attacker.py) for the Problem 2 and [`ssh/attack.py`](https://github.com/mit-pdos/6.1600-labs/tree/main/bad-random/ssh/attack.py) for problem 3.
 
-* **Text:** Place your written answers in the template [`questions.txt`](https://github.com/mit-pdos/6.1600-labs/tree/main/ssh/questions.txt)
+* **Text:** Answer the questions for Problem 1 in the [Lab 3 Questions gradescope assignment](https://www.gradescope.com/courses/844720/assignments/5126626).
+
+* **Testing** This lab contains nondeterministic parts. In order to decrease randomness, we have implemented hidden functions that will be used to grade your attacks. You can test your code against these implementations on the [Lab 3: 2 Testing](https://www.gradescope.com/courses/844720/assignments/5119763) and [Lab 3: 3A Testing](https://www.gradescope.com/courses/844720/assignments/5119211) gradescope assignments. These assignments are worth 0 points but are designed to help you develop your attacks.
 
 
-Upload (`timing/attacker.py`) to the [lab3-timing gradescope assignment](https://www.gradescope.com/courses/533302/assignments/3517357/).
-
-Upload (`ssh/attack.py`, `questions.txt`) to the [lab3-ssh gradescope assignment](https://www.gradescope.com/courses/533302/assignments/3517367/).
+Upload `timing/attacker.py` as `attacker.py` and `ssh/attack.py` as `attack.py` to the [Lab 3 Code gradescope assignment](https://www.gradescope.com/courses/844720/assignments/5122114).
 
 **Running the Lab on Windows**
 `make check` and `make venv` do not natively work on Windows.
@@ -148,6 +148,8 @@ The command `openssl speed -help` will give you
 more options that you can pass to the `speed`
 command.
 
+Please answer the following questions on the [Lab 3 Questions gradescope assignment](https://www.gradescope.com/courses/844720/assignments/5126626).
+
 # Questions
 
 1.  You are designing a file-storage application
@@ -156,17 +158,16 @@ command.
     HMAC-SHA256 and AES-128-GMAC. Both of these
     MACs give 128-bit security. Which has
     better performance for encrypting >1MB files?
-    (You may have to do a little bit of research
-    on the design of both of these primitives to 
-    come up with a good answer.)
+    (You should do a little bit of research
+    on the design of both of these primitives to understand
+    why.)
 
 1.  Your boss tells you that to protect against
     quantum computers, your company will have to
     switch from using AES-128 encryption to
     AES-256 encryption. Roughly how much longer
     will it take to encrypt a 100MB file after
-    increasing the key size? Explain why
-    in at most three sentences.
+    increasing the key size? Why is this the case?
 
 1.  MIT has asked you to redesign the software on
     the MIT certificate authority (CA). They are
@@ -174,7 +175,7 @@ command.
     signatures.
 
 
-    1.      What is the minimum keylength you must
+    1.      What is the minimum key length you must
             use for each of these three 
             signature algorithms to achieve 128-bit
             security under the best-known attacks today?
@@ -194,12 +195,7 @@ command.
             (You should be able to infer the
             answer to this question from the
             output of the `openssl` commands given above.)
-       
-1.  MIT's Touchstone authentication service allows
-    users to authenticated using a username and
-    password. Which password-hashing function would you use 
-    for storing hashed passwords on the server?
-    Explain why in at most three sentences.
+
 
 ## Problem 2: Timing side-channel attack
 
@@ -208,6 +204,10 @@ extract a secret password from a server using an
 insecure authentication scheme.
 
 The code for this assignment is in [`timing`](https://github.com/mit-pdos/6.1600-labs/tree/main/timing).
+
+Timing side channels are nondeterministic. To help decrease the randomness, we have 
+implemented hidden functions that will be used to test your attack. You can test your solution on 
+the [Lab 3: 2 Testing](https://www.gradescope.com/courses/844720/assignments/5119763) gradescope assignment.
 
 # Scenario
 
@@ -245,14 +245,11 @@ In particular, software side channels (specifically, timing side channels) foil 
 
 Your job is to implement `steal_password` in [`timing/attacker.py`](https://github.com/mit-pdos/6.1600-labs/tree/main/timing/attacker.py) to steal the secret password from the server.
 
-Timing side channels have nondeterministic behavior.
-Thus, while we have provided an autograder to help you develop your solution locally, **you will need it to submit your solution to our autograder on Gradescope to receive an accurate evaluation.**
-
 In particular,
  - The autograder will test whether you can extract passwords of different lengths.  The length **in bytes** is the `l` parameter to `steal_password`.
  - Every test will wait 20 minutes for the attacker to extract the secret password.  Your attack must complete by this time (or the autograder will reject it).
  - Your attack must not crash or fail (or the autograder will reject it).
- - To compute your final grade, the autograder will only be run a limited number of times per student.  Make sure that your attack succeeds with a comfortably-high probability.
+ - Your attack is correct if you can convince the autograder to accept your solution.
 
 Finally, you must not access private variables of
 the `BadServer` instance. 
@@ -261,7 +258,8 @@ the `BadServer` instance.
 ## Problem 3: SSH Security
 
 In this problem, you will mount two 
-different attacks on a real SSH implementation.
+different attacks: one that theoretically could work against a real SSH implementation
+and one actually on a real SSH implementation.
 The SSH client and server are built with the very
 slick [`paramiko`](https://github.com/paramiko/paramiko) library.
 
@@ -272,6 +270,10 @@ You will have to implement two functions in
 [`ssh/attack.py`](https://github.com/mit-pdos/6.1600-labs/blob/main/ssh/attack.py).
 You should not change any of the other file -- we
 will grade your solution against fresh copies of these files.
+
+Problem 3A is nondeterministic against real SSH implementations. To simplify the attack,
+we built a hidden, custom compression algorithm allowing the attack to be more deterministic. 
+To test your attack, please use the [Lab 3: 3A Testing](https://www.gradescope.com/courses/844720/assignments/5119211) gradescope assignment.
 
 
 # Getting started
@@ -314,7 +316,7 @@ first compresses the data it wants to send to the
 server, and then the client encrypts it.
 In this problem, you will see how an attacker can
 abuse compress-then-encrypt to decrypt encrypted traffic.
-This attack works against real SSH implementations.
+This attack theoretically works against real SSH implementations.
 
 The code in `grade_decrypt` of
 [`ssh/grader.py`](https://github.com/mit-pdos/6.1600-labs/blob/main/ssh/grader.py)
@@ -359,10 +361,8 @@ Your job is to recover the string `secret`
 exactly.
 
 **NOTE:** Your attack does not need to succeed
-with probability 1. It is good enough if your
-attack works with probability 10% or so -- as 
-long as you can convince the grader to accept
-your solution.
+with probability 1, you just need to convince the grader to accept
+your solution. To test your attack, please use the [Lab 3: 3A Testing](https://www.gradescope.com/courses/844720/assignments/5119211).
 
 
 # Part (b): Tampering with packets
