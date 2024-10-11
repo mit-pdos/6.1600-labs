@@ -78,7 +78,7 @@ resulting public key to standard output.
     a base-10 integer.
 
 
-    For example, on September 26, 2024 we generated a key...
+    For example, on September 24, 2024 we generated a key...
     ```
     $ python keygen.py > key.txt
     -----BEGIN PUBLIC KEY-----
