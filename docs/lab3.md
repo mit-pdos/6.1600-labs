@@ -377,7 +377,7 @@ The code for this no-op MAC is in [`ssh/opts.py`](https://github.com/mit-pdos/6.
 The code in `grade_tamper` of
 [`ssh/grader.py`](https://github.com/mit-pdos/6.1600-labs/blob/main/ssh/grader.py)
 starts an SSH client, connects to the SSH server,
-and sends the shell command `ls ./file/*` to the server.
+and sends the shell command `ls ./files/*` to the server.
 
 **Your task:** You will play the role of an
 in-network attacker that tampers with the SSH packets
