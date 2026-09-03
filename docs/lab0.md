@@ -16,7 +16,7 @@ Please download all the required files from the [lab0 github repo](https://githu
 
 * **Text:** Place your written answers in the Latex template [`questions.tex`](https://github.com/mit-pdos/6.1600-labs/tree/main/hash/LaTeX/questions.tex) and upload to gradescope as pdf (`questions.pdf`) 
 
-Upload all files (`sol.py`, `questions.pdf`, and any supplementary files you used) to the [lab0 gradescope assignment](https://www.gradescope.com/courses/844720/assignments/4841037).
+Upload all files (`sol.py`, `questions.pdf`, and any supplementary files you used) to the [lab0 gradescope assignment](https://www.gradescope.com/courses/1370688/assignments/8563560).
 
 **Gradescope autograder:**
 Your code will be graded with the Gradescope autograder with a timeout of 5 minutes (2a), 10 minutes(2b), 2 seconds (3a-e), 20 minutes(4b). Your code should reliably succeed in this timeframe. 
@@ -100,7 +100,7 @@ standard output as a hex string.
     ```
     Which outputs a hash.
 
-    Each student in 6.1600 has a unique `$PASSWORD` to find. To get the hash for your `$PASSWORD`, submit an empty `sol.py` to [gradescope](https://www.gradescope.com/courses/844720/assignments/4841037). And you should see a result like this for problem 2a:
+    Each student in 6.1600 has a unique `$PASSWORD` to find. To get the hash for your `$PASSWORD`, submit an empty `sol.py` to [gradescope](https://www.gradescope.com/courses/1370688/assignments/8563560). And you should see a result like this for problem 2a:
 
     ```
     2a) test_2a
