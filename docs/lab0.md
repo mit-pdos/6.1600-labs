@@ -181,13 +181,13 @@ That is: $$\Pr[B_1 \lor B_2] \leq \Pr[B_1] + \Pr[B_2]$$._
     a random function. That is, for all $$x \in
 \{0,1\}^n$$, the value $$H(x)$$ is a random
 $$n$$-bit string chosen independent and uniformly
-at random. Place your answer in `problem_3e(L,n)`
+at random.
 
     Using your answer to part (D), compute give
     a non-trivial upper bound on the probability
     that there is a collision among $$H(x_1), H(x_2), \dots, H(x_L)$$,
     where $$x_1, \dots, x_L$$ are distinct $$n$$-bit
-    strings with $$L \ll 2^n$$.
+    strings with $$L \ll 2^n$$. Place your answer in `problem_3e(L,n)`
 
 
 # Problem 4: Finding collisions
