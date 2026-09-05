@@ -183,7 +183,7 @@ That is: $$\Pr[B_1 \lor B_2] \leq \Pr[B_1] + \Pr[B_2]$$._
 $$n$$-bit string chosen independent and uniformly
 at random.
 
-    Using your answer to part (D), compute give
+    Using your answer to part (D), compute
     a non-trivial upper bound on the probability
     that there is a collision among $$H(x_1), H(x_2), \dots, H(x_L)$$,
     where $$x_1, \dots, x_L$$ are distinct $$n$$-bit
