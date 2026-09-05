@@ -87,7 +87,7 @@ a toy hash function that has a 48-bit output.
 For this problem, you will need to read through
 the code at [hashall.py](https://github.com/mit-pdos/6.1600-labs/tree/main/hash/hashall.py) and [sol.py](https://github.com/mit-pdos/6.1600-labs/tree/main/hash/sol.py). It will also be useful to run the grader locally [grader.py](https://github.com/mit-pdos/6.1600-labs/tree/main/hash/grader.py). 
 
-That Python program reads each line from standard
+[hashall.py](https://github.com/mit-pdos/6.1600-labs/tree/main/hash/hashall.py) reads each line from standard
 input, hashes the resulting string using SHA256, 
 and writes the first 48 bits of the hash to 
 standard output as a hex string.
