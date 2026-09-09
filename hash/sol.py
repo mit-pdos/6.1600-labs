@@ -32,7 +32,7 @@ def problem_3d(B,N):
     return prob
     
 # return reasonable upper bound
-def problem_3e(L,N):
+def problem_3e(L,n):
     prob = None
     return prob
 
