@@ -24,9 +24,9 @@ Please download all the required files from the [lab1 github repo](https://githu
 * **Code:** Place your code answers in the template [`attack.py`](https://github.com/mit-pdos/6.1600-labs/tree/main/merkle/attack.py).
     Please include all code necessary to generate your solution in each of the respective methods. Do not just hard code working answers!
 
-* **Text:** Answer the written questions in the [lab1 questions gradescope assignment](https://www.gradescope.com/courses/844720/assignments/4917891). There are both warm-up excercises and theory questions at the end of the lab.
+* **Text:** Answer the written questions in the [lab1 questions gradescope assignment](https://www.gradescope.com/courses/1370688/assignments/8605341). There are both warm-up excercises and theory questions at the end of the lab.
 
-Upload `attack.py` to the [lab1 code gradescope assignment](https://www.gradescope.com/courses/844720/assignments/4918255).
+Upload `attack.py` to the [lab1 code gradescope assignment](https://www.gradescope.com/courses/1370688/assignments/8605339).
 
 **Running the Lab on Windows**
 `make check` and `make run-server` and `make venv` do not natively work on Windows.
@@ -98,7 +98,7 @@ server by running `make run-server`.  Finally, in another terminal, use
     ...
 ```
 
-Answer the following questions in the [gradescope assignment](https://www.gradescope.com/courses/844720/assignments/4917891):
+Answer the following questions in the [gradescope assignment](https://www.gradescope.com/courses/1370688/assignments/8605341):
 
 1. When you restart the server (kill the running server and run
   `make run-server` again), what happens to subsequent client lookups
@@ -175,7 +175,7 @@ client authenticates the responses it gets from the store.  For example:
     % venv/bin/python cli.py --print-proofs get foo
 ```
 
-Answer the following questions in the [gradescope assignment](https://www.gradescope.com/courses/844720/assignments/4917891):
+Answer the following questions in the [gradescope assignment](https://www.gradescope.com/courses/1370688/assignments/8605341):
 
 {:start="3"}
 1. How many siblings are included in the proof to verify the node for `get foo` after you've inserted both
@@ -276,4 +276,4 @@ you implement the attack for scenario 4.
 
 # Theory Questions
 
-Answer all of the theory questions on [gradescope](https://www.gradescope.com/courses/844720/assignments/4917891).
+Answer all of the theory questions on [gradescope](https://www.gradescope.com/courses/1370688/assignments/8605341).
