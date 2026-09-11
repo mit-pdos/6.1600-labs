@@ -45,7 +45,7 @@ plagiarism-detection tool on your
 submissions. Please do not copy code from your
 fellow students. Refer to the "Collaboration"
 section of the [course
-info](https://61600.csail.mit.edu/2023/handouts/info.pdf)
+info](https://61600.csail.mit.edu/2026/handouts/info.pdf)
 document for details on what types of
 collaboration are and aren't allowed in 6.1600.
 If you are having trouble completing an assignment
