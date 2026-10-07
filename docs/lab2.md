@@ -13,14 +13,14 @@ title: "Lab 2: Bad randomness"
 **Instructions on how to submit Lab 2:**
 Please download all the required files from the [lab2 github repo](https://github.com/mit-pdos/6.1600-labs/tree/main/bad-random/).
 
-* **Problem 0:** Please complete the Problem 0 theory questions in the [Lab 2 Questions gradescope assignment](https://www.gradescope.com/courses/844720/assignments/5049460/).
+* **Problem 0:** Please complete the Problem 0 theory questions in the [Lab 2 Questions gradescope assignment](https://www.gradescope.com/courses/1370688/assignments/8771210/).
 
 * **Code:** Place your code answers in the template [`ecdsa/sol.py`](https://github.com/mit-pdos/6.1600-labs/tree/main/bad-random/ecdsa/sol.py) for ecdsa questions and [`wep/attacker.py`](https://github.com/mit-pdos/6.1600-labs/tree/main/bad-random/wep/attacker.py).
     Please include all code necessary to generate your solution in each of the respective methods. Do not just hard code working answers!
 
-* **Theory:** Please answer each attack's corresponding theory questions in the [Lab 2 Questions gradescope assignment](https://www.gradescope.com/courses/844720/assignments/5049460/).
+* **Theory:** Please answer each attack's corresponding theory questions in the [Lab 2 Questions gradescope assignment](https://www.gradescope.com/courses/1370688/assignments/8771210/).
 
-Upload all files (`sol.py`, `attacker.py`) to the [Lab 2 Code gradescope assignment](https://www.gradescope.com/courses/844720/assignments/5048646/).
+Upload all files (`sol.py`, `attacker.py`) to the [Lab 2 Code gradescope assignment](https://www.gradescope.com/courses/1370688/assignments/8771209/).
 
 **Running the Lab on Windows**
 `make check` and `make venv` do not natively work on Windows.
@@ -50,7 +50,7 @@ We are not happy when we find copied code.
 
 # Problem 0: True/False
 
-Please complete the True/False questions in the [Lab 2 Questions gradescope assignment](https://www.gradescope.com/courses/844720/assignments/5049460/).
+Please complete the True/False questions in the [Lab 2 Questions gradescope assignment](https://www.gradescope.com/courses/1370688/assignments/8771210/).
 
 
 # Problem 1: Bad randomness in key generation
@@ -111,7 +111,7 @@ resulting public key to standard output.
    256-bit ECDSA keypair.
 
     For which values of `N` is this approach secure?
-    (Indicate all that apply on the [Lab 2 Questions gradescope assignment](https://www.gradescope.com/courses/844720/assignments/5049460/))
+    (Indicate all that apply on the [Lab 2 Questions gradescope assignment](https://www.gradescope.com/courses/1370688/assignments/8771210/))
 
     * 4 bytes
 
@@ -222,7 +222,7 @@ integer.
     Why is it that an attacker can recover the signer's
     secret key with constant probability after an attacker
     obtains $$2^{64}$$ BadECDSA signatures? Please answer in
-    the [Lab 2 Questions gradescope assignment](https://www.gradescope.com/courses/844720/assignments/5049460/).
+    the [Lab 2 Questions gradescope assignment](https://www.gradescope.com/courses/1370688/assignments/8771210/).
 
 
 # Problem 3: Security issues in the WEP encryption scheme
@@ -258,7 +258,7 @@ we XOR these bytes with the ciphertext.
     What information can an attacker learn when 
     this occurs?
 
-    Please answer in the [Lab 2 Questions gradescope assignment](https://www.gradescope.com/courses/844720/assignments/5049460/).
+    Please answer in the [Lab 2 Questions gradescope assignment](https://www.gradescope.com/courses/1370688/assignments/8771210/).
 
 1.  WEP uses an insecure "hash-then-encrypt"
     scheme for integrity protection. In
