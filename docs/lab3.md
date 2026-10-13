@@ -23,12 +23,12 @@ Please download all the required files from the [lab3-timing github repo](https:
 
 * **Code:** Place your code answers in the template [`timing/attacker.py`](https://github.com/mit-pdos/6.1600-labs/tree/main/bad-random/timing/attacker.py) for the Problem 2 and [`ssh/attack.py`](https://github.com/mit-pdos/6.1600-labs/tree/main/bad-random/ssh/attack.py) for problem 3.
 
-* **Text:** Answer the questions for Problem 1 in the [Lab 3 Questions gradescope assignment](https://www.gradescope.com/courses/844720/assignments/5126626).
+* **Text:** Answer the questions for Problem 1 in the [Lab 3 Questions gradescope assignment](https://www.gradescope.com/courses/1370688/assignments/8862175).
 
-* **Testing** This lab contains nondeterministic parts. In order to decrease randomness, we have implemented hidden functions that will be used to grade your attacks. You can test your code against these implementations on the [Lab 3: 2 Testing](https://www.gradescope.com/courses/844720/assignments/5119763) and [Lab 3: 3A Testing](https://www.gradescope.com/courses/844720/assignments/5119211) gradescope assignments. These assignments are worth 0 points but are designed to help you develop your attacks.
+* **Testing** This lab contains nondeterministic parts. In order to decrease randomness, we have implemented hidden functions that will be used to grade your attacks. You can test your code against these implementations on the [Lab 3: 2 Testing](https://www.gradescope.com/courses/1370688/assignments/8862216) and [Lab 3: 3A Testing](https://www.gradescope.com/courses/1370688/assignments/8862217) gradescope assignments. These assignments are worth 0 points but are designed to help you develop your attacks.
 
 
-Upload `timing/attacker.py` as `attacker.py` and `ssh/attack.py` as `attack.py` to the [Lab 3 Code gradescope assignment](https://www.gradescope.com/courses/844720/assignments/5122114).
+Upload `timing/attacker.py` as `attacker.py` and `ssh/attack.py` as `attack.py` to the [Lab 3 Code gradescope assignment](https://www.gradescope.com/courses/8862186/submissions/436726283).
 
 **Running the Lab on Windows**
 `make check` and `make venv` do not natively work on Windows.
@@ -148,7 +148,7 @@ The command `openssl speed -help` will give you
 more options that you can pass to the `speed`
 command.
 
-Please answer the following questions on the [Lab 3 Questions gradescope assignment](https://www.gradescope.com/courses/844720/assignments/5126626).
+Please answer the following questions on the [Lab 3 Questions gradescope assignment](https://www.gradescope.com/courses/1370688/assignments/8862175).
 
 # Questions
 
@@ -207,7 +207,7 @@ The code for this assignment is in [`timing`](https://github.com/mit-pdos/6.1600
 
 Timing side channels are nondeterministic. To help decrease the randomness, we have 
 implemented hidden functions that will be used to test your attack. You can test your solution on 
-the [Lab 3: 2 Testing](https://www.gradescope.com/courses/844720/assignments/5119763) gradescope assignment.
+the [Lab 3: 2 Testing](https://www.gradescope.com/courses/1370688/assignments/8862216) gradescope assignment.
 
 # Scenario
 
@@ -273,7 +273,7 @@ will grade your solution against fresh copies of these files.
 
 Problem 3A is nondeterministic against real SSH implementations. To simplify the attack,
 we built a hidden, custom compression algorithm allowing the attack to be more deterministic. 
-To test your attack, please use the [Lab 3: 3A Testing](https://www.gradescope.com/courses/844720/assignments/5119211) gradescope assignment.
+To test your attack, please use the [Lab 3: 3A Testing](https://www.gradescope.com/courses/1370688/assignments/8862217) gradescope assignment.
 
 
 # Getting started
@@ -362,7 +362,7 @@ exactly.
 
 **NOTE:** Your attack does not need to succeed
 with probability 1, you just need to convince the grader to accept
-your solution. To test your attack, please use the [Lab 3: 3A Testing](https://www.gradescope.com/courses/844720/assignments/5119211).
+your solution. To test your attack, please use the [Lab 3: 3A Testing](https://www.gradescope.com/courses/1370688/assignments/8862217).
 
 
 # Part (b): Tampering with packets
