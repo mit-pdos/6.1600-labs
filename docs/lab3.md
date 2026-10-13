@@ -28,7 +28,7 @@ Please download all the required files from the [lab3-timing github repo](https:
 * **Testing** This lab contains nondeterministic parts. In order to decrease randomness, we have implemented hidden functions that will be used to grade your attacks. You can test your code against these implementations on the [Lab 3: 2 Testing](https://www.gradescope.com/courses/1370688/assignments/8862216) and [Lab 3: 3A Testing](https://www.gradescope.com/courses/1370688/assignments/8862217) gradescope assignments. These assignments are worth 0 points but are designed to help you develop your attacks.
 
 
-Upload `timing/attacker.py` as `attacker.py` and `ssh/attack.py` as `attack.py` to the [Lab 3 Code gradescope assignment](https://www.gradescope.com/courses/8862186/submissions/436726283).
+Upload `timing/attacker.py` as `attacker.py` and `ssh/attack.py` as `attack.py` to the [Lab 3 Code gradescope assignment](https://www.gradescope.com/courses/1370688/assignments/8862186).
 
 **Running the Lab on Windows**
 `make check` and `make venv` do not natively work on Windows.
